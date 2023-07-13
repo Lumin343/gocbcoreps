@@ -144,6 +144,10 @@ func (c *RoutingClient) CloseBucket(bucketName string) {
 func (c *RoutingClient) ConnectionState() ConnState {
 	r := c.routing.Load()
 
+	if r == nil {
+		return ConnStateOffline
+	}
+
 	return r.Conns.State()
 }
 
