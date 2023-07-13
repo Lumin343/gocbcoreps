@@ -1,4 +1,4 @@
-module github.com/couchbase/gocbcoreps
+module github.com/Lumin343/gocbcoreps
 
 go 1.19
 
